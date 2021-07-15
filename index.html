@@ -17,7 +17,6 @@
 		<!-- google font -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
-        <link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
@@ -512,11 +511,12 @@
         </div>	<!-- content-block -->
 
         <footer id="site-footer">
-            <div class="container">
+            <div class="container text-center">
+                <button class="back-to-top"><i class="fas fa-arrow-alt-circle-up"></i></button><br>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> <a href="#" target="_blank" rel="noopener noreferrer"> EH FAHIM</a></div>
-                    </div>
+                     </div>
                     <div class="col-sm-6">
                         <div class="designed-by">Designed with <span style="font-size:15px;color:red;">&hearts;</span>                        </div>
                     </div>
@@ -666,6 +666,18 @@ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-
       
                 
       }
+      </script>
+      <script>
+          $(window).scroll(function(){
+		if($(this).scrollTop()>100){
+			$(".back-to-top").fadeIn();
+		}else{
+			$(".back-to-top").fadeOut();
+		}
+	});
+	$(".back-to-top").click(function(){
+		$("html, body").animate({scrollTop:0},1000)
+	})
       </script>
 	</body>
 </html>
